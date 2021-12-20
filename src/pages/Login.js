@@ -7,8 +7,6 @@ import { useNavigate } from 'react-router-dom';
 
 const Login = (props) => {
     
-    // a var "props" esta recebendo "details" do LoginForms, use ela para jogar os dado no FireBase
-
     let navigate = useNavigate();
 
     const adminUser = {
@@ -48,6 +46,9 @@ const Login = (props) => {
     return (   
         <div>
             {(user.email != "")? (
+
+                //PEGUE OS DADOS DO "user" QUANDO CHEGAR AQUI         <---------------------------------------------------
+
                 navigate("/perfil")
 
             ):(

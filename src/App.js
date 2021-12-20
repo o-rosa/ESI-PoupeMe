@@ -16,7 +16,7 @@ function App() {
     <MemoryRouter>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Feed/>} />
+          <Route path="/" element={<Inicio/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/cadastro" element={<Cadastro/>} />
           <Route path="/feed" element={<Feed/>} />

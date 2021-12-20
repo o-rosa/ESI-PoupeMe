@@ -128,7 +128,9 @@ const Feed = (props) => {
             return <Pergunta4 Feed={Questao4} error={error}/>
         }
         else{
-            //PEGUE OS DADOS QUANDO CHEGAR AQUI         <---------------------------------------------------
+            
+            //PEGUE OS DADOS DO "user" QUANDO CHEGAR AQUI         <---------------------------------------------------
+            
             console.log(user);
             navigate("/perfil")
         }

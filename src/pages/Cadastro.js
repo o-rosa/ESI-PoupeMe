@@ -8,8 +8,6 @@ import { useNavigate } from 'react-router-dom';
 
 const Login = (props) => {
     
-    // a var "props" esta recebendo "details" do CadastroForms, use ela para jogar os dado no FireBase
-
     let navigate = useNavigate();
 
 
@@ -52,6 +50,9 @@ const Login = (props) => {
     return (   
         <div>
             {(user.email != "")? (
+                
+                //PEGUE OS DADOS DO "user" QUANDO CHEGAR AQUI         <---------------------------------------------------
+
                 navigate("/feed")
             ):(
                 <LoginForm Login={Login} error={error}/>
