@@ -1,0 +1,96 @@
+.corpo {
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: 705E5E;
+  }
+  .textinho{
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 30px;
+    font-size: 11pt;
+    font-weight: 100;
+}
+h2{
+    margin: 0px;
+}
+
+
+.login{
+    background-color: #FFF0EA !important;
+    color: #705E5E !important;
+    padding: 13px 20px 13px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: background-color 0.4s;
+    margin: 0px !important;
+}
+
+.spanHover{
+    display: none;
+}
+.login:hover{
+    background-color: #d8c1b8 !important;
+    transition: background-color 0.2s;
+}
+.login:hover .spanHover{
+    display: initial;
+}
+.login:hover .spanNone{
+    display: none;
+}
+
+.doneteIcon{
+    color: #705E5E !important;
+    margin-left: 170px;
+    text-align: right !important;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
+
+
+label{
+    font-weight: 100;
+    font-size: 11pt;
+}
+
+#password{
+    margin-bottom: 20px !important;
+}
+
+input{
+    width: 90%;
+    height: 30px;
+    margin-bottom: 15px;
+
+}
+
+.botao{
+    
+    width: 90%;
+}
+.error{
+    color: red;
+}
+.cad{
+    text-decoration: underline !important;
+
+}
+
+.termos{
+        
+}
+#checkbox{
+    width: 20px !important;
+    height: 15px;
+    margin-bottom: 60px;
+}

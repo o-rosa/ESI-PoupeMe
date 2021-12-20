@@ -1,0 +1,11 @@
+.corpo {
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: 705E5E;
+  }

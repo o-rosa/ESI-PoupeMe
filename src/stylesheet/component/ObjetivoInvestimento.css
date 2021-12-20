@@ -1,0 +1,23 @@
+.pergunta{
+    font-weight: 100;
+    font-size: 11pt;
+    text-align: left;
+    width: 88vw;
+}
+
+#objetivo{
+    width: 88vw;
+    height: 300px;
+    margin-bottom: 50px;
+    
+}
+h2{
+    margin-bottom: 30px !important;
+}
+
+#botao{
+    width: 90vw;
+}
+.erro{
+    color: red;
+}

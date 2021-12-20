@@ -1,0 +1,104 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #625A5A;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+
+.textinho{
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 30px;
+    font-size: 11pt;
+    font-weight: 100;
+}
+h4{
+    font-weight: 300;
+    margin-bottom: 0px;
+
+
+}
+
+
+
+.iniciar{
+    background-color: #FFF0EA !important;
+    color: #705E5E !important;
+    padding: 13px 20px 13px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    white-space: nowrap;
+    width: 240px;
+    text-align: left;
+    transition: background-color 0.4s;
+    
+}
+
+.spanHover{
+    display: none;
+}
+.iniciar:hover{
+    background-color: #d8c1b8 !important;
+    transition: background-color 0.2s;
+}
+.iniciar:hover .spanHover{
+    display: initial;
+}
+.iniciar:hover .spanNone{
+    display: none;
+}
+
+.doneteIcon{
+    color: #705E5E !important;
+    margin-left: 170px;
+    text-align: right !important;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

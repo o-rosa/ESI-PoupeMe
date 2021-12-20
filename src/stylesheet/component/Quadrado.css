@@ -1,0 +1,44 @@
+.radioff{
+    visibility:hidden;
+    height: 0px;
+
+    margin: 0px;
+}
+
+.caixa{
+    background-color: #F1ECEC;
+    height: 50px;
+    display: flex;
+    width: 88vw;
+    padding: 5px;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.txt{
+    margin: 0px;
+    text-align: left ;
+    font-size: medium;
+    font-size: 11pt;
+    margin-left: 20px;
+}
+.icon{
+    margin: 10px;
+    text-align: left;
+    font-size: 25px;
+
+}
+
+.lbl:hover .caixa{
+    
+    background-color: #cabcbc;
+    transition: background-color 0.3s;
+}
+
+.lbl:target .caixa{
+    background-color: #cabcbc;
+}
+
+.l4{
+    margin-bottom: 40px;
+}
