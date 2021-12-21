@@ -34,7 +34,7 @@ function CadastroForm({Login, error}) {
         <form onSubmit={submitHandler}>
             <div className='form-inner corpo'>
                 <h2>Cadastre-se</h2>
-                {(error != "")?(<p className="textinho error">{error}</p>): (<p className="textinho">Bem vindo ao Poupe me!</p>)}
+                {(error != "")?(<p className="textinho error">{error}</p>): (<p className="textinho">Bem vindo ao Me Poupe!</p>)}
 
                 <label htmlFor="email">Nome: </label>
                 <input type="text" name='name' id='name' onChange={e => setDetails({...details, name: e.target.value})} value={details.name} />

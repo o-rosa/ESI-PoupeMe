@@ -20,7 +20,7 @@ const Inicio = (props) => {
             <h4>
                 Bem-vindo ao Me Poupe!
             </h4>
-            <p className="textinho">Aqui voce aprendera a controlar suas financas e conquistar a independencia financeira</p>
+            <p className="textinho">Aqui voce aprende a controlar suas financas e a conquistar sua independência financeira</p>
 
             <Link to="/cadastro"> <div className="iniciar"><span className="spanNone">&nbsp;&nbsp; INICIAR</span><span className="spanHover">&nbsp;&nbsp; INICIAR</span><FontAwesomeIcon icon={faArrowRight} className="doneteIcon"/></div></Link>
 
