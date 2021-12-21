@@ -33,7 +33,7 @@ function LoginForm({Login, error}) {
                 <input type="password" name='password' id='password' onChange={e => setDetails({...details, password: e.target.value})} value={details.password} />
 
                 <div className='botao'>
-                    <input type="submit" value="LOGIN"/> <br />
+                    <input type="submit" value="LOGIN" className='botaoEstilo'/> <br />
                     <label htmlFor="cadastro">Nao tem uma conta? <Link to="/cadastro" className='cad'>Cadastre-se</Link></label>
                 </div>
             </div>
