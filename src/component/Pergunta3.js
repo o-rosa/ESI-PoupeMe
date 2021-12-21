@@ -47,7 +47,7 @@ function Pergunta3() {
                                      txt1="Ainda não tenho um objetivo definido" txt2="Preservar capital: corrigir os investimentos pela variação da inflação" 
                                      txt3="Acumular recursos: obter rentabilidade acima da inflação" txt4="Especular: ter alta valorização, correndo riscos maiores, se necessário"/>   
                                               
-            <input type="submit" value="PROXIMO" id='botao' />
+            <input type="submit" value="PROXIMO" id='botao' className='botaoEstilo'/>
             
         </form>
   

@@ -48,7 +48,7 @@ function Pergunta2() {
                                      txt1="Não tenho conhecimento" txt2="Razoável" 
                                      txt3="Bom" txt4="Excelente"/>
                                                  
-            <input type="submit" value="PROXIMO" id='botao' />
+            <input type="submit" value="PROXIMO" id='botao' className='botaoEstilo'/>
             
         </form>
   

@@ -48,7 +48,7 @@ function Pergunta4() {
                                      txt1="Nunca investi. Primeiro aporte." txt2="Investi apenas em produtos ou fundos de renda fixa." 
                                      txt3="Investi em produtos de renda fixa e/ou renda variável com finalidade de hedge." txt4="Investi em produtos de renda fixa e/ou renda variável com finalidade de especulação ou alavancagem"/>
             
-            <input type="submit" value="PROXIMO" id='botao' />
+            <input type="submit" value="CONCLUIR" id='botao' className='botaoEstilo'/>
             
         </form>
   

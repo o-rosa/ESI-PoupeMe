@@ -47,7 +47,7 @@ function Pergunta1() {
                                      txt1="Ligo para meu gerente e peço orientação" txt2="Pesquiso na internet  como guardar dinheiro" 
                                      txt3="Leio livros e revistas sobre investimentos " txt4="Converso com pessoas que já investem"/>
             
-            <input type="submit" value="PROXIMO" id='botao' />
+            <input type="submit" value="PROXIMO" id='botao' className='botaoEstilo'/>
             
         </form>
   
