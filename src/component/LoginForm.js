@@ -8,7 +8,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 import { Link } from 'react-router-dom';
 import { BtnDefaultIcons } from '../component/ButtonStyled';
-import GTranslateIcon from '@material-ui/icons/GTranslate';
+// import GTranslateIcon from '@material-ui/icons/GTranslate';
 import Api from '../Api.js';
 
 
@@ -55,7 +55,7 @@ function LoginForm({ Login, error }) {
                 </div>
 
                 <BtnDefaultIcons onClick={actionLoginGoogle}>
-                    <GTranslateIcon />
+                    {/* <GTranslateIcon /> */}
                     Faça Login com Google
                 </BtnDefaultIcons>
 

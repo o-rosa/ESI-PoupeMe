@@ -8,17 +8,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faWifi , faBook, faPeopleArrows} from '@fortawesome/free-solid-svg-icons'
 
 import { Link } from 'react-router-dom';
+import { useUserPointsContext } from '../contexts/UserPointsContext';
 
 
 
-function Pergunta1({Feed, error}) {
-    
+function Pergunta1() {
+    const {user, setUser, error, setError} = useUserPointsContext()
     const [details, setDetails] = useState({Questao1:""});
 
     const submitHandler = e => {
         e.preventDefault();
 
-        Feed(details);
+        if (details.Questao1 != ""){
+            setUser({
+                objetivo: user.objetivo,
+                pergunta01:details.Questao1, 
+                pergunta02:"", 
+                pergunta03:"",
+                pergunta04:""
+            });
+            
+        }else{
+            setError("Selecione uma caixa!");
+        }
     }
 
 

@@ -7,17 +7,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 import { Link } from 'react-router-dom';
+import { useUserPointsContext } from '../contexts/UserPointsContext';
 
 
 
-function ObjetivoInvestimento({Feed, error}) {
-    
+function ObjetivoInvestimento() {
+    const { setUser, error, setError} = useUserPointsContext()
     const [details, setDetails] = useState({objetivo:""});
 
     const submitHandler = e => {
         e.preventDefault();
-
-        Feed(details);
+        if (details.objetivo != ""){
+            setUser({
+                objetivo: details.objetivo,
+                pergunta01:"", 
+                pergunta02:"", 
+                pergunta03:"",
+                pergunta04:""
+            });
+            
+        }else{
+            console.log("Coloque um objetivo!");
+            setError("Coloque um objetivo!");
+        }
     }
 
 
