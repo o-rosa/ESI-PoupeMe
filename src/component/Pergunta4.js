@@ -29,11 +29,11 @@ function Pergunta4({Feed, error}) {
 
     return (   
         <form onSubmit={submitHandler}>
-            <p className='pergunta'>Ultima questao amem {(error != "")?(<p className='pergunta erro'>{error}</p>): ("")}</p>
+            <p className='pergunta'>Quais investimentos você realizou frequentemente nos últimos 24 meses? {(error != "")?(<p className='pergunta erro'>{error}</p>): ("")}</p>
             
             <Quadrados Check={Check} icon1={faBan} icon2={faCartPlus} icon3={faHeadphonesAlt} icon4={faAdjust} 
-                                     txt1="Alo galera de cowboy" txt2="Alo galera de peao" 
-                                     txt3="Quem gosta de rodeio " txt4="Bate forte com a mao"/>
+                                     txt1="Nunca investi. Primeiro aporte." txt2="Investi apenas em produtos ou fundos de renda fixa." 
+                                     txt3="Investi em produtos de renda fixa e/ou renda variável com finalidade de hedge." txt4="Investi em produtos de renda fixa e/ou renda variável com finalidade de especulação ou alavancagem"/>
             
             <input type="submit" value="PROXIMO" id='botao' />
             
