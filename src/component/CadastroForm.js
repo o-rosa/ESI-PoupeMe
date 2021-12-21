@@ -47,7 +47,7 @@ function CadastroForm({Login, error}) {
                     <label htmlFor="checkbox">Concordo com todos os Termos e Condições </label>
                 </div>
                 <div className='botao'>
-                    <input type="submit" value="CADASTRAR"/> <br />
+                    <input type="submit" value="CADASTRAR" className='botaoEstilo'/> <br />
                     <label htmlFor="cadastro">Ja tem uma conta? <Link to="/login" className='cad'>Login</Link></label>
                 </div>
             </div>

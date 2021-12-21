@@ -28,7 +28,7 @@ function ObjetivoInvestimento({Feed, error}) {
             <p className='pergunta'>Qual seu objetivo de investimento? {(error != "")?(<p className='pergunta erro'>{error}</p>): ("")}</p>
             <textarea rows="20" cols="40" name='objetivo' id='objetivo' onChange={e => setDetails({...details, objetivo: e.target.value})} value={details.objetivo} />
             <div className='botao'>
-                <input type="submit" value="PROXIMO" id='botao'/>
+                <input type="submit" value="PROXIMO" id='botao' className='botaoEstilo'/>
             </div>
 
         </form>

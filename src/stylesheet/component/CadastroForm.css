@@ -94,3 +94,20 @@ input{
     height: 15px;
     margin-bottom: 60px;
 }
+
+.botaoEstilo{
+    background-color: #625A5A;
+    color: #fff;
+    border-radius: 20px;
+    border: 0px;
+    box-shadow: 0px;
+    height: 37px;
+    font-size: 9pt;
+    transition: background-color 0.5s;
+}
+.botaoEstilo:hover{
+    background-color: #352c2c;
+    cursor: pointer;
+    transition: background-color  0.4s;
+    
+}

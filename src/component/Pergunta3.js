@@ -35,7 +35,7 @@ function Pergunta3({Feed, error}) {
                                      txt1="Alo galera de cowboy" txt2="Alo galera de peao" 
                                      txt3="Quem gosta de rodeio " txt4="Bate forte com a mao"/>   
                                               
-            <input type="submit" value="PROXIMO" id='botao' />
+            <input type="submit" value="PROXIMO" id='botao' className='botaoEstilo'/>
             
         </form>
   
