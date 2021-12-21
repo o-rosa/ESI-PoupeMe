@@ -1,0 +1,56 @@
+.fundo{
+    width: 100vw;
+    height: 300vh;
+    background-color: #F1ECEC;
+    border-radius: 50px;
+    position: fixed;
+    top: 100px;
+    z-index: 1;
+
+}
+.imgNome{
+    z-index: 2;
+    position: absolute;
+    
+}
+.imgpessoa{
+    border-radius: 50%;
+    width: 132px;
+    height: 132px;
+    object-fit: cover;
+    object-position: 2px 5px;
+    position: fixed;
+    top: 35px;
+    right: calc(50% - 66px);
+}
+.nomecorno{
+    position: fixed;
+    top: 180px;
+    width: 100%;
+    font-size: 14pt;
+    font-weight: 500;
+}
+.frase{
+    position: fixed;
+    top: 220px;
+    left: 10vw;
+    font-size: 10pt;
+    font-weight: 300;
+}
+.tipo{
+    position: fixed;
+    top: 280px;
+    width: 100%;
+    font-size: 17pt;
+    font-weight: 500;
+}
+.texto{
+    top: 330px; 
+    text-align: justify;
+    width: 80vw;
+}
+.btnPerfil{
+    position: fixed;
+    bottom: 10px;
+    left: calc(50% - 45vw);
+}
