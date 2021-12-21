@@ -8,17 +8,30 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBan, faCartPlus , faHeadphonesAlt, faAdjust} from '@fortawesome/free-solid-svg-icons'
 
 import { Link } from 'react-router-dom';
+import { useUserPointsContext } from '../contexts/UserPointsContext';
 
 
 
-function Pergunta2({Feed, error}) {
-    
+function Pergunta2() {
+    const {user, setUser, error, setError} = useUserPointsContext()
     const [details, setDetails] = useState({Questao2:""});
 
     const submitHandler = e => {
         e.preventDefault();
 
-        Feed(details);
+        if (details.Questao2 !== ""){
+            console.log(details.Questao2);
+            setUser({
+                objetivo: user.objetivo,
+                pergunta01:user.pergunta01, 
+                pergunta02:details.Questao2, 
+                pergunta03:"",
+                pergunta04:""
+            });
+            
+        }else{
+            setError("Selecione uma caixa!");
+        }
     }
 
 
@@ -29,11 +42,11 @@ function Pergunta2({Feed, error}) {
 
     return (   
         <form onSubmit={submitHandler}>
-            <p className='pergunta'>Boa tarde amigos: {(error != "")?(<p className='pergunta erro'>{error}</p>): ("")}</p>
+            <p className='pergunta'>Como você avalia seu conhecimento sobre investimentos?{(error != "")?(<p className='pergunta erro'>{error}</p>): ("")}</p>
             
             <Quadrados Check={Check} icon1={faBan} icon2={faCartPlus} icon3={faHeadphonesAlt} icon4={faAdjust} 
-                                     txt1="Alo galera de cowboy" txt2="Alo galera de peao" 
-                                     txt3="Quem gosta de rodeio " txt4="Bate forte com a mao"/>
+                                     txt1="Não tenho conhecimento" txt2="Razoável" 
+                                     txt3="Bom" txt4="Excelente"/>
                                                  
             <input type="submit" value="PROXIMO" id='botao' className='botaoEstilo'/>
             

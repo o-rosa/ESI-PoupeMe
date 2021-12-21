@@ -18,12 +18,12 @@
     width: 132px;
     height: 132px;
     object-fit: cover;
-    object-position: 2px 5px;
+    object-position: 0px 0px;
     position: fixed;
     top: 35px;
     right: calc(50% - 66px);
 }
-.nomecorno{
+.nomePessoa{
     position: fixed;
     top: 180px;
     width: 100%;

@@ -17,8 +17,8 @@ const Login = (props) => {
     const Login = details => {
         console.log(details);
 
-        if (details.name != "" && details.email != "" && details.password != ""){
-            if(details.termos != ""){
+        if (details.name !== "" && details.email !== "" && details.password !== ""){
+            if(details.termos !== ""){
                 console.log("Logged in")
 
                 setUser({
@@ -49,7 +49,7 @@ const Login = (props) => {
 
     return (   
         <div>
-            {(user.email != "")? (
+            {(user.email !== "")? (
                 
                 //PEGUE OS DADOS DO "user" QUANDO CHEGAR AQUI         <---------------------------------------------------
 
