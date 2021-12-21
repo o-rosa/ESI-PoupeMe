@@ -103,3 +103,24 @@ input{
     transition: background-color  0.4s;
     
 }
+.btngoogle{
+    background-color: #0000ee !important;
+    align-items: center;
+    width: 78vw !important;
+    position: relative;
+    left: calc(50% - 39vw)
+
+}
+
+.botaoEstilo:hover{
+    background-color: rgb(17, 17, 143) !important;
+    cursor: pointer;
+    transition: background-color  0.4s;
+    
+    
+}
+.googleTexto{
+    position: relative;
+    top: 30%;
+
+}

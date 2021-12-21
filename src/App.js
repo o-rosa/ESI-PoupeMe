@@ -9,6 +9,7 @@ import Feed from './pages/Feed';
 import Inicio  from './pages/Inicio';
 import Login from './pages/Login';
 import Perfil from './pages/Perfil';
+import UserPointsContextProvider from './contexts/UserPointsContext';
 
 
 function App() {
