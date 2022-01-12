@@ -65,7 +65,28 @@ label{
 
 #password{
     margin-bottom: 60px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    background-color: #eee;
+    padding: 5px 0px 5px 10px;
+    font-size: 14pt;
 }
+
+#email{
+    border-radius: 10px;
+    border: 1px solid #555;
+    background-color: #eee;
+    padding: 5px 0px 5px 10px;
+    font-size: 14pt;
+}
+#name{
+    border-radius: 10px;
+    border: 1px solid #555;
+    background-color: #eee;
+    padding: 5px 0px 5px 10px;
+    font-size: 14pt;
+}
+
 
 input{
     width: 90%;

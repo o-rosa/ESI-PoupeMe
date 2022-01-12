@@ -36,12 +36,12 @@ function CadastroForm({Login, error}) {
                 <h2>Cadastre-se</h2>
                 {(error != "")?(<p className="textinho error">{error}</p>): (<p className="textinho">Bem vindo ao Me Poupe!</p>)}
 
-                <label htmlFor="email">Nome: </label>
-                <input type="text" name='name' id='name' onChange={e => setDetails({...details, name: e.target.value})} value={details.name} />
-                <label htmlFor="email">E-mail: </label>
-                <input type="email" name='email' id='email' onChange={e => setDetails({...details, email: e.target.value})} value={details.email} />
-                <label htmlFor="password">Senha: </label>
-                <input type="password" name='password' id='password' onChange={e => setDetails({...details, password: e.target.value})} value={details.password} />
+                <label htmlFor="email"></label>
+                <input type="text" name='name' placeholder="Nome" id='name' onChange={e => setDetails({...details, name: e.target.value})} value={details.name} />
+                <label htmlFor="email"></label>
+                <input type="email" name='email' placeholder="E-mail" id='email' onChange={e => setDetails({...details, email: e.target.value})} value={details.email} />
+                <label htmlFor="password"></label>
+                <input type="password" name='password' placeholder="Senha" id='password' onChange={e => setDetails({...details, password: e.target.value})} value={details.password} />
                 <div className='termos'>
                     <input type="checkbox" name='checkbox' id='checkbox' checked={checked} onChange={handleChange}/>
                     <label htmlFor="checkbox">Concordo com todos os Termos e Condições </label>
