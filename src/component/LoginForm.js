@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 import { BtnDefaultIcons } from '../component/ButtonStyled';
 // import GTranslateIcon from '@material-ui/icons/GTranslate';
 import Api from '../Api.js';
-
+import {VerificaCampo} from '../utils/validacao';
 
 
 function LoginForm({ Login, error }) {
@@ -19,7 +19,6 @@ function LoginForm({ Login, error }) {
 
     const submitHandler = e => {
         e.preventDefault();
-
         Login(details);
     }
 

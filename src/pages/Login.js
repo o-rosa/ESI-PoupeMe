@@ -7,6 +7,7 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
 import firebaseConfig from '../firebaseConfig';
+import {VerificaCampo} from '../utils/validacao';
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
@@ -25,18 +26,22 @@ const Login = (props) => {
     
     
     const Login = details => {
-
-        firebase.auth().signInWithEmailAndPassword(details.email,details.password).then(function(result) {
-            setUser({
-                email: details.email,
-                password: details.password
+        if(VerificaCampo(details.email) && VerificaCampo(details.password)){
+            firebase.auth().signInWithEmailAndPassword(details.email,details.password).then(function(result) {
+                setUser({
+                    email: details.email,
+                    password: details.password
+                });
+            }).catch(function (error) {
+                setError("E-mail ou senha incorretos!");
+                var errorCode = error.code;
+                var errorMessage = error.message;
             });
-        }).catch(function (error) {
-            setError("E-mail ou senha incorretos!");
-            var errorCode = error.code;
-            var errorMessage = error.message;
-        });
-        console.log('details',details);
+            console.log('details',details);
+        }
+        else{
+            setError("Preencha todos os campos!");
+        }
     }
 
     const Logout = () => {
