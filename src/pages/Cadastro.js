@@ -4,7 +4,7 @@ import LoginForm from '../component/CadastroForm';
 
 import { useNavigate } from 'react-router-dom';
 
-
+import {VerificaCampo} from '../utils/validacao';
 
 const Login = (props) => {
     
@@ -17,7 +17,7 @@ const Login = (props) => {
     const Login = details => {
         console.log(details);
 
-        if (details.name !== "" && details.email !== "" && details.password !== ""){
+        if (VerificaCampo(details.name) && VerificaCampo(details.email) && VerificaCampo(details.password)){
             if(details.termos !== ""){
                 console.log("Logged in")
 

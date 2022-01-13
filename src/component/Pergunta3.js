@@ -9,6 +9,7 @@ import { faBan, faCartPlus , faHeadphonesAlt, faAdjust} from '@fortawesome/free-
 
 import { Link } from 'react-router-dom';
 import { useUserPointsContext } from '../contexts/UserPointsContext';
+import {VerificaCampo} from '../utils/validacao';
 
 
 
@@ -19,7 +20,7 @@ function Pergunta3() {
     const submitHandler = e => {
         e.preventDefault();
 
-        if (details.Questao3 !== ""){
+        if (VerificaCampo(details.Questao3)){
             setUser({
                 objetivo: user.objetivo,
                 pergunta01:user.pergunta01, 

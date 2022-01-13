@@ -4,6 +4,7 @@ import '../stylesheet/pages/Perfil.css';
 import { Link } from 'react-router-dom';
 import { useUserPointsContext } from '../contexts/UserPointsContext';
 import imagem from '../image/pessoaGenerica.png';
+import {VerificaPerfil} from '../utils/validacao';
 
 
 const Login = (props) => {
@@ -13,10 +14,8 @@ const Login = (props) => {
     const [perfil, setPerfil] = useState('')
 
     useEffect(() => {
-        const userPoints = parseInt(user.pergunta01) + parseInt(user.pergunta02) + parseInt(user.pergunta03) + parseInt(user.pergunta04)
-        if(userPoints <= 4) setPerfil('Conservador')
-        else if(userPoints <= 7) setPerfil('Moderado')
-        else if(userPoints <= 12) setPerfil('Agressivo')
+        const userPoints = parseInt(user.pergunta01) + parseInt(user.pergunta02) + parseInt(user.pergunta03) + parseInt(user.pergunta04);
+        setPerfil(VerificaPerfil(userPoints));
     }, [setPerfil, user])
 
     switch (perfil) {

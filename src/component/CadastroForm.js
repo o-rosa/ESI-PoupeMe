@@ -8,6 +8,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 import { Link } from 'react-router-dom';
 
+import {VerificaCampo} from '../utils/validacao';
 
 
 function CadastroForm({Login, error}) {
@@ -24,8 +25,9 @@ function CadastroForm({Login, error}) {
 
     const submitHandler = e => {
         e.preventDefault();
-
         Login(details);
+        
+        
     }
 
 
