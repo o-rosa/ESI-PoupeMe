@@ -3,6 +3,7 @@ import '../stylesheet/pages/Cadastro.css';
 import LoginForm from '../component/CadastroForm';
 
 import { useNavigate } from 'react-router-dom';
+import {VerificaCampo} from '../utils/validacao';
 
 import { getDatabase, ref, set } from "firebase/database";
 import firebase from 'firebase/compat/app';
@@ -44,6 +45,7 @@ function generateUserID() {
     return (Date.now().toString(36) + Math.random().toString(36).substring(2)
     );
 }
+
 const Login = (props) => {
 
     let navigate = useNavigate();
@@ -56,7 +58,7 @@ const Login = (props) => {
     const Login = details => {
         console.log(details);
 
-        if (details.name !== "" && details.email !== "" && details.password !== "") {
+        if (VerificaCampo(details.name) && VerificaCampo(details.email) && VerificaCampo(details.password)) {
             if (details.termos === "") {
                 console.log("Termos nao aceitos!");
                 setError("Termos nao aceitos!");

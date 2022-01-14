@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 import { BtnDefaultIcons } from '../component/ButtonStyled';
 // import GTranslateIcon from '@material-ui/icons/GTranslate';
 import Api from '../Api.js';
-
+import {VerificaCampo} from '../utils/validacao';
 
 
 function LoginForm({ Login, error }) {
@@ -19,7 +19,6 @@ function LoginForm({ Login, error }) {
 
     const submitHandler = e => {
         e.preventDefault();
-
         Login(details);
     }
 
@@ -38,14 +37,15 @@ function LoginForm({ Login, error }) {
 
     return (
         <form onSubmit={submitHandler}>
+
             <div className='form-inner corpo'>
                 <h2>Login</h2>
                 {(error != "") ? (<p className="textinho error">{error}</p>) : (<p className="textinho">Bem vindo ao Poupe me!</p>)}
 
-                <label htmlFor="email">E-mail: </label>
-                <input type="email" name='email' id='email' onChange={e => setDetails({ ...details, email: e.target.value })} value={details.email} />
-                <label htmlFor="password">Senha: </label>
-                <input type="password" name='password' id='password' onChange={e => setDetails({ ...details, password: e.target.value })} value={details.password} />
+                <label htmlFor="email"></label>
+                <input type="email" name='email' id='email' placeholder="E-mail" onChange={e => setDetails({ ...details, email: e.target.value })} value={details.email} />
+                <label htmlFor="password"></label>
+                <input type="password" name='password' placeholder="Senha" id='password' onChange={e => setDetails({ ...details, password: e.target.value })} value={details.password} />
 
 
 

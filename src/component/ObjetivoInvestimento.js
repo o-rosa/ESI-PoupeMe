@@ -8,7 +8,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 import { Link } from 'react-router-dom';
 import { useUserPointsContext } from '../contexts/UserPointsContext';
-
+import {VerificaCampo} from '../utils/validacao';
 
 
 function ObjetivoInvestimento() {
@@ -17,8 +17,9 @@ function ObjetivoInvestimento() {
 
     const submitHandler = e => {
         e.preventDefault();
-        if (details.objetivo != ""){
-            setUser({...user,
+        if (VerificaCampo(details.objetivo)){
+            setUser({
+                ...user,
                 objetivo: details.objetivo,
                 pergunta01:"", 
                 pergunta02:"", 
