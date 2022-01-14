@@ -4,9 +4,13 @@ import '../stylesheet/pages/Perfil.css';
 import { Link } from 'react-router-dom';
 import { useUserPointsContext } from '../contexts/UserPointsContext';
 import imagem from '../image/pessoaGenerica.png';
+import { useNavigate } from 'react-router-dom';
 
 
-const Login = (props) => {
+const Perfil = (props) => {
+
+    let navigate = useNavigate();
+
     const [userTeste, setUser] = useState({img:imagem, foto:"Fulano de Tal", tipo:"xxx", texto:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum ultricies sit nulla etiam sagittis  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum ultricies sit nulla etiam sagittis  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum ultricies sit nulla etiam sagittis  <br />  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum ultricies sit nulla etiam sagittis  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum ultricies sit nulla etiam sagittis  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum ultricies sit nulla etiam sagittis"});
 
     const {user} = useUserPointsContext()
@@ -43,7 +47,9 @@ const Login = (props) => {
 
                 <p className='frase texto'>  {userTeste.texto}     </p>
 
-                <input type="submit" value="VER INVESTIMENTOS" id='botao' className='botaoEstilo btnPerfil' />
+                <button id='botao' className='botaoEstilo btnPerfil' onClick={()=>navigate("/home")}>
+                VER INVESTIMENTOS
+                </button>
 
             </div>
             <div className='fundo'></div>
@@ -54,5 +60,5 @@ const Login = (props) => {
     );
   }
   
-  export default Login;
+  export default Perfil;
   
