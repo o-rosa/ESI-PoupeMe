@@ -7,6 +7,30 @@ import imagem from '../image/pessoaGenerica.png';
 import { useNavigate } from 'react-router-dom';
 import {VerificaPerfil} from '../utils/validacao';
 
+import firebase from 'firebase/compat/app';
+import firebaseConfig from '../firebaseConfig';
+import { getFirestore } from 'firebase/firestore/lite';
+import { addDoc } from 'firebase/firestore/lite';
+import { collection, query, where, getDocs } from "firebase/firestore/lite";
+import { wait } from '@testing-library/user-event/dist/utils';
+
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+
+async function getUserByEmail(email) {
+    const db = getFirestore(firebaseApp);
+    const q = query(collection(db, "users"), where("email", "==", email));
+    let userData;
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((doc) => {
+      // doc.data() is never undefined for query doc snapshots
+      console.log(doc.id, " => ", doc.data());
+      userData = doc.data();
+    });
+
+    return userData;
+}
+
 const Perfil = (props) => {
 
     let navigate = useNavigate();
@@ -15,7 +39,7 @@ const Perfil = (props) => {
 
     const {user} = useUserPointsContext()
     const [perfil, setPerfil] = useState('')
-
+    
     useEffect(() => {
         const userPoints = parseInt(user.pergunta01) + parseInt(user.pergunta02) + parseInt(user.pergunta03) + parseInt(user.pergunta04);
         setPerfil(VerificaPerfil(userPoints));

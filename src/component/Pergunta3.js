@@ -22,6 +22,7 @@ function Pergunta3() {
 
         if (VerificaCampo(details.Questao3)){
             setUser({
+                ...user,
                 objetivo: user.objetivo,
                 pergunta01:user.pergunta01, 
                 pergunta02:user.pergunta02, 

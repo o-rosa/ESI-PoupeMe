@@ -10,6 +10,7 @@ import firebaseConfig from '../firebaseConfig';
 import {VerificaCampo} from '../utils/validacao';
 
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useUserPointsContext } from '../contexts/UserPointsContext';
 
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
@@ -24,7 +25,7 @@ const Login = (props) => {
         password: "adm123"
     }
 
-    const [user, setUser] = useState({email:"", password:""});
+    const {user, setUser} = useUserPointsContext();
     const [error, setError] = useState("");
     
     
@@ -32,6 +33,7 @@ const Login = (props) => {
         if(VerificaCampo(details.email) && VerificaCampo(details.password)){
             firebase.auth().signInWithEmailAndPassword(details.email,details.password).then(function(result) {
                 setUser({
+                    ...user,
                     email: details.email,
                     password: details.password
                 });
