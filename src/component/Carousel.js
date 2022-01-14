@@ -7,7 +7,7 @@ import InvestimensService from '../service/InvestmentsService.js'
 const CustomCarousel = (props) => {
 
     const listOfOfertas = props.data;
-    listOfOfertas[0].MelhorOferta = "TRUE";
+    //listOfOfertas[0].MelhorOferta = "TRUE";
     
     return (
         <Carousel showArrows={true} showStatus={false} showIndicators={false}>
@@ -22,7 +22,7 @@ const CustomCarousel = (props) => {
                     <div className='card-desc'>
                         <><span className='title'>{oferta.TipoTitulo}</span>
                         <span className='desc'>Aplicação mínima: {oferta.aplicacaoMinima}</span>
-                        <span className='desc'>Rentabilidade: {oferta.Rentabilidade}</span>
+                        <span className='desc'>Rentabilidade: {oferta.Rentabilidade}%</span>
                         <span className='desc'>Liquidez: {oferta.Liquidez}</span>
                         <span className='desc'>Validade: {oferta.DataVencimento}</span></>
                     </div>
