@@ -10,8 +10,6 @@ import { faBan, faCartPlus , faHeadphonesAlt, faAdjust} from '@fortawesome/free-
 import { Link } from 'react-router-dom';
 import { useUserPointsContext } from '../contexts/UserPointsContext';
 
-
-
 function Pergunta4() {
     const {user, setUser, error, setError} = useUserPointsContext()
     const [details, setDetails] = useState({Questao4:""});
@@ -22,6 +20,7 @@ function Pergunta4() {
 
         if (details.Questao4 != ""){
             setUser({
+                ...user,
                 objetivo: user.objetivo,
                 pergunta01:user.pergunta01, 
                 pergunta02:user.pergunta02, 

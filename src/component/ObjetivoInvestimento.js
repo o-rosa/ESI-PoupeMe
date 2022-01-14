@@ -12,20 +12,20 @@ import { useUserPointsContext } from '../contexts/UserPointsContext';
 
 
 function ObjetivoInvestimento() {
-    const { setUser, error, setError} = useUserPointsContext()
+    const {user, setUser, error, setError} = useUserPointsContext()
     const [details, setDetails] = useState({objetivo:""});
 
     const submitHandler = e => {
         e.preventDefault();
         if (details.objetivo != ""){
-            setUser({
+            setUser({...user,
                 objetivo: details.objetivo,
                 pergunta01:"", 
                 pergunta02:"", 
                 pergunta03:"",
                 pergunta04:""
             });
-            
+            console.log("Esse é o user", user);
         }else{
             console.log("Coloque um objetivo!");
             setError("Coloque um objetivo!");

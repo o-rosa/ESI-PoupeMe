@@ -9,6 +9,7 @@ import 'firebase/compat/firestore';
 import firebaseConfig from '../firebaseConfig';
 
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useUserPointsContext } from '../contexts/UserPointsContext';
 
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
@@ -23,7 +24,7 @@ const Login = (props) => {
         password: "adm123"
     }
 
-    const [user, setUser] = useState({email:"", password:""});
+    const {user, setUser} = useUserPointsContext();
     const [error, setError] = useState("");
     
     
@@ -31,8 +32,8 @@ const Login = (props) => {
 
         firebase.auth().signInWithEmailAndPassword(details.email,details.password).then(function(result) {
             setUser({
+                ...user,
                 email: details.email,
-                password: details.password
             });
         }).catch(function (error) {
             setError("E-mail ou senha incorretos!");

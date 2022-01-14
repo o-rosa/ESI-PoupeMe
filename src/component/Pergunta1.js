@@ -21,6 +21,7 @@ function Pergunta1() {
 
         if (details.Questao1 != ""){
             setUser({
+                ...user,
                 objetivo: user.objetivo,
                 pergunta01:details.Questao1, 
                 pergunta02:"", 

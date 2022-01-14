@@ -12,7 +12,7 @@ export const UserPointsContext = createContext({
 })
 
 const UserPointsContextProvider = ({children}) => {
-  const [user, setUser] = useState({objetivo:"", pergunta01:"", pergunta02:"", pergunta03:"", pergunta04:""});
+  const [user, setUser] = useState({name: "", email: "", objetivo:"", perfil: "", pergunta01:"", pergunta02:"", pergunta03:"", pergunta04:""});
   const [error, setError] = useState("");
 
   return (
