@@ -6,7 +6,6 @@ import '../stylesheet/component/Carousel.css';
 const CustomCarousel = (props) => {
 
     const listOfOfertas = props.data;
-    listOfOfertas[0].MelhorOferta = "TRUE";
     
     return (
         <Carousel showArrows={true} showStatus={false} showIndicators={false}>
