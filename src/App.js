@@ -9,6 +9,7 @@ import Feed from './pages/Feed';
 import Inicio  from './pages/Inicio';
 import Login from './pages/Login';
 import Perfil from './pages/Perfil';
+import Home from './pages/Home';
 import UserPointsContextProvider from './contexts/UserPointsContext';
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/cadastro" element={<Cadastro/>} />
           <Route path="/feed" element={<Feed/>} />
           <Route path="/perfil" element={<Perfil/>} />
+          <Route path="/home" element={<Home/>} />
         </Routes> 
 
       </div>
