@@ -9,6 +9,9 @@ import 'firebase/compat/firestore';
 import firebaseConfig from '../firebaseConfig';
 import {VerificaCampo} from '../utils/validacao';
 
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+
+
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
 

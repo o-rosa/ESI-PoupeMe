@@ -1,0 +1,44 @@
+.card{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-radius: 14px;
+    background: #F1ECEC;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+.card-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-left: 32px;
+    margin-bottom: 48px;
+}
+.title{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+.desc{
+    font-size: 16px;
+    color:#1F1D1D;
+    margin-bottom: 8px;
+}
+.melhor-oferta{
+    top: 24px;
+    right: 24px;
+    position: absolute;
+    color: white;
+    background: #625A5A;
+    width: 70%;
+    height: 40px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+}
