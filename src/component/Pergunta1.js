@@ -10,6 +10,7 @@ import { faPhone, faWifi , faBook, faPeopleArrows} from '@fortawesome/free-solid
 import { Link } from 'react-router-dom';
 import { useUserPointsContext } from '../contexts/UserPointsContext';
 
+import {VerificaCampo} from '../utils/validacao';
 
 
 function Pergunta1() {
@@ -19,7 +20,7 @@ function Pergunta1() {
     const submitHandler = e => {
         e.preventDefault();
 
-        if (details.Questao1 != ""){
+        if (VerificaCampo(details.Questao1)){
             setUser({
                 objetivo: user.objetivo,
                 pergunta01:details.Questao1, 

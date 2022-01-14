@@ -13,6 +13,7 @@ import firebaseConfig from '../firebaseConfig';
 import { getFirestore } from 'firebase/firestore/lite';
 import { collection } from 'firebase/firestore/lite';
 import { addDoc } from 'firebase/firestore/lite';
+import {VerificaCampo} from '../utils/validacao';
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
@@ -47,8 +48,8 @@ const Login = (props) => {
     const Login = details => {
         console.log(details);
 
-        if (details.name !== "" && details.email !== "" && details.password !== "") {
-            if (details.termos !== "") {
+        if (VerificaCampo(details.name) && VerificaCampo(details.email) && VerificaCampo(details.password)){
+            if(details.termos !== ""){
                 console.log("Logged in")
                 
                 setUser({
@@ -73,10 +74,6 @@ const Login = (props) => {
     const Logout = () => {
         setUser({ name: "", email: "", password: "" });
     }
-
-
-
-
 
 
     return (

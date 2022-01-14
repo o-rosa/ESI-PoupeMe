@@ -2,12 +2,11 @@ import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import '../stylesheet/component/Carousel.css';
-import InvestimensService from '../service/InvestmentsService.js'
 
 const CustomCarousel = (props) => {
 
     const listOfOfertas = props.data;
-    //listOfOfertas[0].MelhorOferta = "TRUE";
+    listOfOfertas[0].MelhorOferta = "TRUE";
     
     return (
         <Carousel showArrows={true} showStatus={false} showIndicators={false}>
